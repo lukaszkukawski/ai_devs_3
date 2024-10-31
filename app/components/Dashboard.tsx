@@ -14,7 +14,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import { usePathname } from 'next/navigation';
 
 const tasks = [
-  { id: 1, title: 'Zadanie 1', path: '/zadanie1', icon: <AssignmentIcon /> },
+  { id: 1, title: 'Poligon#1', path: '/task_1_Poligon', icon: <AssignmentIcon /> },
   { id: 2, title: 'Zadanie 2', path: '/zadanie2', icon: <AssignmentIcon /> },
   // Dodaj więcej zadań według potrzeb
 ];

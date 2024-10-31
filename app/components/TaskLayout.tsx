@@ -11,7 +11,7 @@ import { useTheme } from '@mui/material/styles';
 interface TaskLayoutProps {
   title: string;
   content: string;
-  solution: string;
+  solution: React.ReactNode;
 }
 
 export default function TaskLayout({ title, content, solution }: TaskLayoutProps) {
@@ -28,7 +28,7 @@ export default function TaskLayout({ title, content, solution }: TaskLayoutProps
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant="body1" color="text.secondary">
-            {content}
+            <pre style={{ whiteSpace: 'pre-wrap' }}>{content}</pre>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -37,9 +37,7 @@ export default function TaskLayout({ title, content, solution }: TaskLayoutProps
           <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>Rozwiązanie</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body1" color="text.secondary">
-            {solution}
-          </Typography>
+          {solution}
         </AccordionDetails>
       </Accordion>
     </Box>
