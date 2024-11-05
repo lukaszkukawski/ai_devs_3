@@ -27,9 +27,9 @@ export default function TaskLayout({ title, content, solution }: TaskLayoutProps
           <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>Treść Zadania</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body1" color="text.secondary">
+          <Box component="div" sx={{ color: 'text.secondary', whiteSpace: 'pre-wrap' }}>
             <pre style={{ whiteSpace: 'pre-wrap' }}>{content}</pre>
-          </Typography>
+          </Box>
         </AccordionDetails>
       </Accordion>
       <Accordion sx={{ maxWidth: 800, width: '100%', transition: 'all 0.3s ease', '&:hover': { boxShadow: 3 } }}>

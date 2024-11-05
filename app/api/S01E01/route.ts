@@ -4,7 +4,11 @@ import { JSDOM } from 'jsdom';
 
 export async function GET(request: NextRequest, { params }) {
     try {
-        const response = await fetch('https://xyz.ag3nts.org/');
+        const endpoint = process.env.NEXT_PUBLIC_ENDPOINT_XYZ;
+        if (!endpoint) {
+            throw new Error('Environment variable NEXT_PUBLIC_ENDPOINT_XYZ is not defined');
+        }
+        const response = await fetch(endpoint);
         const text = await response.text();
         const dom = new JSDOM(text);
         const questionElement = dom.window.document.getElementById('human-question');
@@ -36,8 +40,11 @@ export async function POST(request: NextRequest, { params }) {
     formData.append('password', '574e112a');
     formData.append('answer', answer);
     //formData.append('apikey', process.env.NEXT_PUBLIC_AI_DEVS_API_KEY || '');
-    console.log("formData.toString()", formData.toString())
-    const response = await fetch('https://xyz.ag3nts.org/', {
+    const endpoint = process.env.NEXT_PUBLIC_ENDPOINT_XYZ;
+    if (!endpoint) {
+        throw new Error('Environment variable NEXT_PUBLIC_ENDPOINT_XYZ is not defined');
+    }
+    const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

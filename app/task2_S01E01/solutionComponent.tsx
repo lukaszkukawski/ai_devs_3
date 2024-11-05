@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Typography, Box, Paper } from '@mui/material';
 import OpenAI from "openai";
+import {  genSimpleAnswerFromAi } from '../lib/ genSimpleAnswerFromAi';
 
 function SolutionComponent() {
     const [question, setQuestion] = useState('');
@@ -28,25 +29,27 @@ function SolutionComponent() {
     }, []);
 
     const genAsnwerFromAi = async () => {
-        console.log("genAsnwerFromAi1", process.env.NEXT_PUBLIC_OPENAI_API_KEY)
-        console.log("genAsnwerFromAi2", process.env['NEXT_PUBLIC_OPENAI_API_KEY'])
-        try {
-            const openai = new OpenAI({
-                apiKey: process.env['NEXT_PUBLIC_OPENAI_API_KEY'],
-                dangerouslyAllowBrowser: true
-            });
-            const completion = await openai.chat.completions.create({
-                model: "gpt-4o",
-                messages: [
-                    {"role": "system", "content": "Odpowiedz tylko na zadane pytanie jednym słowem lub liczbą, bez dodawania dodatkowych informacji"},
-                    {"role": "user", "content": question}
-                ]
-            });
-
-            setAnswer(completion.choices[0].message.content || '');
-        } catch (error) {
-            console.error('Error fetching AI response:', error);
+        const answer = await genSimpleAnswerFromAi(question);
+        if (answer) {
+            setAnswer(answer);
         }
+        // try {
+        //     const openai = new OpenAI({
+        //         apiKey: process.env['NEXT_PUBLIC_OPENAI_API_KEY'],
+        //         dangerouslyAllowBrowser: true
+        //     });
+        //     const completion = await openai.chat.completions.create({
+        //         model: "gpt-4o",
+        //         messages: [
+        //             {"role": "system", "content": "Odpowiedz tylko na zadane pytanie jednym słowem lub liczbą, bez dodawania dodatkowych informacji"},
+        //             {"role": "user", "content": question}
+        //         ]
+        //     });
+
+        //     setAnswer(completion.choices[0].message.content || '');
+        // } catch (error) {
+        //     console.error('Error fetching AI response:', error);
+        // }
     };
 
     const sendForm = async () => {

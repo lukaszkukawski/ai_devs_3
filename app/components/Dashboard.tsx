@@ -16,6 +16,7 @@ import { usePathname } from 'next/navigation';
 const tasks = [
   { id: 1, title: 'Poligon#1', path: '/task_1_Poligon', icon: <AssignmentIcon /> },
   { id: 2, title: 'S01E01#2', path: '/task2_S01E01', icon: <AssignmentIcon /> },
+  { id: 2, title: 'S01E02#3', path: '/task3_S01E02', icon: <AssignmentIcon /> },
   // Dodaj więcej zadań według potrzeb
 ];
 
