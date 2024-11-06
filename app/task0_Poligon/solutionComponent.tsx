@@ -15,7 +15,11 @@ function SolutionComponent() {
     const fetchData = async () => {
       setLoadingFetch(true);
       try {
-        const data = await fetchTextData('https://poligon.aidevs.pl/dane.txt');
+        const endpoint = process.env.NEXT_PUBLIC_ENDPOINT_POLIGON_FILE_DANE;
+        if (!endpoint) {
+            throw new Error('Environment variable NEXT_PUBLIC_ENDPOINT_POLIGON_FILE_DANE is not defined');
+        }
+        const data = await fetchTextData(endpoint);
         setDataArray(data);
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
@@ -36,7 +40,11 @@ function SolutionComponent() {
     const sendPostRequest = async () => {
       setLoadingPost(true);
       try {
-        const result = await postData('https://poligon.aidevs.pl/verify', {
+        const endpoint = process.env.NEXT_PUBLIC_ENDPOINT_POLIGON_VERIFY;
+        if (!endpoint) {
+            throw new Error('Environment variable NEXT_PUBLIC_ENDPOINT_POLIGON_VERIFY is not defined');
+        }
+        const result = await postData(endpoint, {
           task: "POLIGON",
           apikey: process.env.NEXT_PUBLIC_AI_DEVS_API_KEY,
           answer: dataArray

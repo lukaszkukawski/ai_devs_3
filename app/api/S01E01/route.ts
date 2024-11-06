@@ -44,6 +44,8 @@ export async function POST(request: NextRequest, { params }) {
     if (!endpoint) {
         throw new Error('Environment variable NEXT_PUBLIC_ENDPOINT_XYZ is not defined');
     }
+    console.log('endpoint', endpoint);
+    console.log('formData', formData.toString());
     const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
