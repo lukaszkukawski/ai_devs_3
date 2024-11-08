@@ -1,0 +1,80 @@
+Jesteś asystentem AI, który ma znaleźć ścieżkę na planszy zgodnie z poniższymi informacjami.
+
+Plansza:
+
+Plansza składa się z 6 osi X (numerowanych od 1 do 6) i 4 Os Y (numerowanych od 1 do 4).
+Pionek startuje na polu (1, 1), czyli w dolnym lewym rogu planszy.
+Celem jest pole (6, 1), czyli dolny prawy róg planszy.
+Blokady znajdują się na polach:
+
+(2, 1)
+(2, 2)
+(2, 4)
+(4, 2)
+(4, 3)
+
+Zasady:
+
+-Nie można wchodzić na blokady ani wychodzić poza planszę.
+-Można poruszać się tylko w czterech kierunkach: UP, RIGHT, DOWN, LEFT.
+-Po każdym ruchu sprawdź czy nie jesteś na blokadzie albo czy nie wyszedłeś poza plansze, jeżeli tak się stało wróć do poprzedniego pola
+
+Instrukcje:
+
+-Znajdź ścieżkę od punktu startowego do celu, omijając blokady.
+-Wynik przedstaw jako sekwencję poleceń UP, RIGHT, DOWN lub LEFT.
+--np 
+---przejście z pola (1,1) na pole (1,2) to ruch UP, 
+---przejście z pola (1,3) na pole (2,3) to ruch RIGHT, 
+---przejście z pola (3,3) na pole (3,2) to ruch DOWN, 
+---przejście z pola (2,3) na pole (1,3) to ruch LEFT, 
+
+Pisząc współrzędne  (1, 2) zawsze traktuj to jak (x, y)
+
+-Użyj następującego formatu odpowiedzi:
+
+<RESULT>
+{
+ "steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
+Przed podaniem wyniku dodaj: 
+<THINKING>
+</THINKING>
+Aby potwierdzić poprawność odpowiedz
+
+
+=====================================================
+===BŁĘDNY
+=====================================================
+
+Gramy w grę, mamy planszę składająca się z pól, cała plansza składa 24 pól, plansza ma wymiary 6x4 (6 pól szerokości i 4 pola wysokości)
+
+Podając wymiary 6x4 mam na mysli 6 kolumn a 4 wiersze
+zaczynamy od pola 1x4 (czyli dolny lewy róg)
+naszym celem jest dojść do pola 6x4 czyli dolny prawy róg.
+Mamy 5 blokad, na które nie możemy wejść, czyli musimy je ominąć, te blokady znajdują się  na polach:
+2x1, 2x3, 2x4, 4x2 i 4x3
+
+Podaj mi instrukcję dojścia do celu. musisz wysłać ją w formie kolejnych kroków jakie muszę wykonać np 
+przejście z pola 1x4 na pole 1x3 to ruch UP, 
+przejście z pola 1x2 na pole 2x2 to ruch RIGHT, 
+przejście z pola 2x2 na pole 2x3 to ruch DOWN, 
+przejście z pola 2x2 na pole 1x2 to ruch LEFT, 
+
+Wynik podaj w formacie JSON,  bez niczego więcej, w polu steps ma się pojawić String gdzie kolejne kroki będą oddzielone przecinkami.
+
+Upewnij się, że uwzględniasz każdy ruch i nie pomijasz żadnego kroku, ostatni krok też musisz wykonać, aby wejść na pole 6x4.
+
+Jeżeli natrafisz na blokadę to usuń ten ruch i z pola wcześniejszego wykonaj ruch w innym kierunku.
+
+Przed podaniem wyniki dodaj
+<THINKING>
+</THINKING>
+Aby upewnić się czy dobrze odpowiadasz
+
+<RESULT>
+{
+ "steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
