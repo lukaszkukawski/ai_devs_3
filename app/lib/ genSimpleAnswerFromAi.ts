@@ -1,11 +1,16 @@
 import OpenAI from "openai";
 
+export const getOpenAI = async () => {
+    const openai = new OpenAI({
+        apiKey: process.env['NEXT_PUBLIC_OPENAI_API_KEY'],
+        dangerouslyAllowBrowser: true
+    });
+    return openai;
+}
+
 export const  genSimpleAnswerFromAi = async (question: string, content: string = "") => {
     try {
-        const openai = new OpenAI({
-            apiKey: process.env['NEXT_PUBLIC_OPENAI_API_KEY'],
-            dangerouslyAllowBrowser: true
-        });
+        const openai = await getOpenAI();
         const completion = await openai.chat.completions.create({
             model: "gpt-4o",
             messages: [
@@ -22,10 +27,7 @@ export const  genSimpleAnswerFromAi = async (question: string, content: string =
 
 export const genSimpleAnswerFromAiWithSystem = async (question: string, content: string) => {
     try {
-        const openai = new OpenAI({
-            apiKey: process.env['NEXT_PUBLIC_OPENAI_API_KEY'],
-            dangerouslyAllowBrowser: true
-        });
+        const openai = await getOpenAI();
         const completion = await openai.chat.completions.create({
             model: "gpt-4o",
             messages: [
