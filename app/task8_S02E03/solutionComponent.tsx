@@ -7,7 +7,7 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { getOpenAI } from '../lib/ genSimpleAnswerFromAi';
+import { getOpenAI } from '../lib/genSimpleAnswerFromAi';
 
 function SolutionComponent() {
     const [robotDesc, setRobotDesc] = useState<string>("");

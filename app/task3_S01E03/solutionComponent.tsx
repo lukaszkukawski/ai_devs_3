@@ -6,7 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import { genSimpleAnswerFromAi } from '../lib/ genSimpleAnswerFromAi';
+import { genSimpleAnswerFromAi } from '../lib/genSimpleAnswerFromAi';
 
 function SolutionComponent() {
     const [dataArray, setDataArray] = useState<string[]>([]);

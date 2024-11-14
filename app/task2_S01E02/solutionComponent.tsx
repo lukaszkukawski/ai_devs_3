@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Button, Typography, Box, Paper } from '@mui/material';
-import { genSimpleAnswerFromAi } from '../lib/ genSimpleAnswerFromAi';
+import { genSimpleAnswerFromAi } from '../lib/genSimpleAnswerFromAi';
 
 function SolutionComponent() {
     const [answer, setAnswer] = useState('');
