@@ -23,6 +23,8 @@ const tasks = [
   { id: 7, title: 'S02E02#7', path: '/task7_S02E02', icon: <AssignmentIcon /> },
   { id: 8, title: 'S02E03#8', path: '/task8_S02E03', icon: <AssignmentIcon /> },
   { id: 9, title: 'S02E04#9', path: '/task9_S02E04', icon: <AssignmentIcon /> },
+  { id: 10, title: 'S02E05#10', path: '/task10_S02E05', icon: <AssignmentIcon /> },
+  
   // Dodaj więcej zadań według potrzeb
 ];
 

@@ -7,6 +7,7 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { genSimpleAnswerFromAiWithSystem } from '../lib/genSimpleAnswerFromAi';
+import { json } from 'stream/consumers';
 
 function SolutionComponent() {
     const [loadingFetch, setLoadingFetch] = useState<boolean>(false);
@@ -94,7 +95,7 @@ function SolutionComponent() {
                     fullWidth
                     minRows={4}
                     maxRows={10}
-                    value={transcriptionText}
+                    value={JSON.stringify(transcriptionText)}
                     onChange={(e) => setTranscriptionText(e.target.value)}
                     variant="outlined"
                 />
