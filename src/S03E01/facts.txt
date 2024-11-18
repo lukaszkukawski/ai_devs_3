@@ -1,0 +1,27 @@
+[
+  {
+    "person": "Aleksander Ragowski",
+    "keywords": "nauczyciel,programista,krytyk,aktywistka",
+    "fileName": "f04.txt"
+  },
+  {
+    "person": "Barbara Zawadzka",
+    "keywords": "postać, specjalistka, frontend development, kariera, branża IT, automatyzacja, sztuczna inteligencja, trauma, ruch oporu, umiejętności techniczne, JavaScript, Python, technologia, baza wektorowa, kodowanie, algorytm, zabezpieczenia, systemy rządowe, systemy kontroli robotów, relacja, nauczyciel, angielski, aktywista, Kraków, walka wręcz, krav maga, samoobrona, broń palna, przeciwnik, koktajle Mołotowa, zamieszki, akcje sabotażowe, kontrasty, pragmatyzm, bezkompromisowość, pieczenie pizzy, ananas, spokój, równowaga psychiczna, projekt, komunikacja, jednostki SI",
+    "fileName": "f05.txt"
+  },
+  {
+    "person": "Azazel",
+    "keywords": "postać, ruch oporu, władze, przeszłość, wiedza, technologia, naukowiec, systemy operacyjne, robot, maszyna, fabryka, monitoring, korespondencja, Zygfryd, teleportacja, eksperyment, zdolność, władza, laboratorium, plotka, wiedza ponadczasowa, zdolność nadprzyrodzona, mistrz znikania",
+    "fileName": "f06.txt"
+  },
+  {
+    "person": "Rafał Bomba",
+    "keywords": "laborant,naukowiec,asystent,zaginiony,eksperyment,badacz,technologia,paranoja,zaburzenia psychiczne,manipulacja umysłowa",
+    "fileName": "f07.txt"
+  },
+  {
+    "person": "Adam Gospodarczyk",
+    "keywords": "postać,ruch oporu,programowanie,umiejętności rekrutacyjne,technologia,kodowanie,agenci,sztuczna inteligencja,przykrywka,rekruci,szkolenie,zabezpieczenia AI,sabotaż,tajemniczość,powiązania",
+    "fileName": "f08.txt"
+  }
+]

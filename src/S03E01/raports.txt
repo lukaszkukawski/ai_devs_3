@@ -1,0 +1,44 @@
+[
+  {
+    "person": "Aleksander Ragowski",
+    "keywords": "jednostka,skrzydło fabryki,skan biometryczny,dział kontroli,patrol",
+    "fileName": "2024-11-12_report-00-sektor_C4.txt"
+  },
+  {
+    "keywords": "godzina,alarm,ruch,zwierzyna,obszar,patrol,spokój",
+    "fileName": "2024-11-12_report-01-sektor_A1.txt"
+  },
+  {
+    "keywords": "patrol,monitoring,obiekt",
+    "fileName": "2024-11-12_report-02-sektor_A3.txt"
+  },
+  {
+    "keywords": "godzina,patrol,noc,monitorowanie,czujnik,wykrywanie,życie",
+    "fileName": "2024-11-12_report-03-sektor_A3.txt"
+  },
+  {
+    "keywords": "godzina,patrol,teren,anomalia,odchylenie,norma,sektor,bezpieczeństwo,komunikacja,punkt",
+    "fileName": "2024-11-12_report-04-sektor_B2.txt"
+  },
+  {
+    "keywords": "godzina,wykrycie,aktywność,sensor,dźwięk,deteckor,ruch,gotowość,sygnały,patrol,monitorowanie",
+    "fileName": "2024-11-12_report-05-sektor_C1.txt"
+  },
+  {
+    "keywords": "sektor,temperatura,ruch,jednostka,patrol",
+    "fileName": "2024-11-12_report-06-sektor_C2.txt"
+  },
+  {
+    "person": "Barbara Zawadzka",
+    "keywords": "czujnik,nadajnik,analiza,odcisk,palec,las,ultradźwięk,sygnał,patorl",
+    "fileName": "2024-11-12_report-07-sektor_C4.txt"
+  },
+  {
+    "keywords": "monitoring,patrol,czujniki,obserwacja",
+    "fileName": "2024-11-12_report-08-sektor_A1.txt"
+  },
+  {
+    "keywords": "patrol,peryferie,czujniki,sygnały,anomalie,sektor",
+    "fileName": "2024-11-12_report-09-sektor_C2.txt"
+  }
+]
