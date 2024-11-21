@@ -2,11 +2,11 @@ import TaskLayout from '../components/TaskLayout';
 import content from './content';
 import SolutionComponent from './solutionComponent';
 
-export default function Zadanie11() {
+export default function Zadanie13() {
 
   return (
     <TaskLayout
-      title="Zadanie 12"
+      title="Zadanie 13"
       content={content}
       solution={<SolutionComponent />}
     />
