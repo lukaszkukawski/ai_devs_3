@@ -27,8 +27,8 @@ export const  genSimpleAnswerFromAi = async (question: string, content: string =
 
 export const genSimpleAnswerFromAiWithSystem = async (question: string, content: string) => {
     try {
-        console.log("question", question);
-        console.log("content", content);
+        //console.log("question", question);
+        //console.log("content", content);
 
         const openai = await getOpenAI();
         const completion = await openai.chat.completions.create({
@@ -112,7 +112,8 @@ export const genTranscriptionsAudioFromAi = async (convertedBuffer: Buffer, file
 
 export const getRESULT = (answerFromAI: string): string => {
     try {
-        const resultMatch = answerFromAI?.match(/<RESULT>(.*?)<\/RESULT>/);
+        const resultMatch = answerFromAI?.replace(/\n/g, '').match(/<RESULT>(.*?)<\/RESULT>/);
+        //const resultMatch = answerFromAI?.match(/<RESULT>(.*?)<\/RESULT>/);
         if (resultMatch && resultMatch[1]) {
             return resultMatch[1];
         }

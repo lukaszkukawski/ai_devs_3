@@ -29,6 +29,9 @@ const tasks = [
   { id: 13, title: 'S03E03#13', path: '/task13_S03E03', icon: <AssignmentIcon /> },
   { id: 14, title: 'S03E04#14', path: '/task14_S03E04', icon: <AssignmentIcon /> },
   { id: 15, title: 'S03E05#15', path: '/task15_S03E05', icon: <AssignmentIcon /> },
+  { id: 16, title: 'S04E01#16', path: '/task16_S04E01', icon: <AssignmentIcon /> },
+  { id: 17, title: 'S04E02#17', path: '/task17_S04E02', icon: <AssignmentIcon /> },
+  { id: 18, title: 'S04E03#18', path: '/task18_S04E03', icon: <AssignmentIcon /> },
   
   // Dodaj więcej zadań według potrzeb
 ];
